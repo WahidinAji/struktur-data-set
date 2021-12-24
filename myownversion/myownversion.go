@@ -22,7 +22,7 @@ func (d *DependencyStructureDataSet) Added(value string, lengthSlice int) bool {
 }
 //to ensure the length of array/slice
 func (d *DependencyStructureDataSet) ensure() {
-	if len(d.ExampleArray) >= 10 {
+	if d.Length >= len(d.ExampleArray) {
 		var temp = make([]string,len(d.ExampleArray))
 		for i := 0; i < len(d.ExampleArray); i++ {
 			temp[i] = d.ExampleArray[i]
